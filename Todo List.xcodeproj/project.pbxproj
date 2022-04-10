@@ -14,6 +14,15 @@
 		3BF023C92803228300542364 /* Todo_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023C72803228300542364 /* Todo_List.xcdatamodeld */; };
 		3BF023CB2803228400542364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BF023CA2803228400542364 /* Assets.xcassets */; };
 		3BF023CE2803228400542364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF023CC2803228400542364 /* LaunchScreen.storyboard */; };
+		3BF023D92803230800542364 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023D82803230800542364 /* ListViewController.swift */; };
+		3BF023DC280327FF00542364 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023DB280327FF00542364 /* ListCell.swift */; };
+		3BF023DF28032B3500542364 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023DE28032B3500542364 /* RandomColor.swift */; };
+		3BF023E128032CD900542364 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023E028032CD900542364 /* TodoViewController.swift */; };
+		3BF023E528033B9400542364 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023E428033B9400542364 /* DataManager.swift */; };
+		3BF023E728033C3900542364 /* DataManager+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023E628033C3900542364 /* DataManager+List.swift */; };
+		3BF023E9280344ED00542364 /* ViewValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023E8280344ED00542364 /* ViewValues.swift */; };
+		3BF023EB2803468C00542364 /* TextValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023EA2803468C00542364 /* TextValues.swift */; };
+		3BF023ED2803476F00542364 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF023EC2803476F00542364 /* Icons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		3BF023CA2803228400542364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BF023CD2803228400542364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BF023CF2803228400542364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BF023D82803230800542364 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		3BF023DB280327FF00542364 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		3BF023DE28032B3500542364 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
+		3BF023E028032CD900542364 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		3BF023E428033B9400542364 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3BF023E628033C3900542364 /* DataManager+List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+List.swift"; sourceTree = "<group>"; };
+		3BF023E8280344ED00542364 /* ViewValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewValues.swift; sourceTree = "<group>"; };
+		3BF023EA2803468C00542364 /* TextValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValues.swift; sourceTree = "<group>"; };
+		3BF023EC2803476F00542364 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,9 @@
 		3BF023BD2803228300542364 /* Todo List */ = {
 			isa = PBXGroup;
 			children = (
+				3BF023E228033B6F00542364 /* Storage */,
+				3BF023DD28032B2400542364 /* Utils */,
+				3BF023D5280322C900542364 /* Modules */,
 				3BF023BE2803228300542364 /* AppDelegate.swift */,
 				3BF023C02803228300542364 /* SceneDelegate.swift */,
 				3BF023C22803228300542364 /* ViewController.swift */,
@@ -65,9 +86,71 @@
 				3BF023CA2803228400542364 /* Assets.xcassets */,
 				3BF023CC2803228400542364 /* LaunchScreen.storyboard */,
 				3BF023CF2803228400542364 /* Info.plist */,
-				3BF023C72803228300542364 /* Todo_List.xcdatamodeld */,
 			);
 			path = "Todo List";
+			sourceTree = "<group>";
+		};
+		3BF023D5280322C900542364 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3BF023D7280322DE00542364 /* Todo */,
+				3BF023D6280322D500542364 /* List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3BF023D6280322D500542364 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3BF023DA280327EE00542364 /* Views */,
+				3BF023D82803230800542364 /* ListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3BF023D7280322DE00542364 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				3BF023E028032CD900542364 /* TodoViewController.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		3BF023DA280327EE00542364 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BF023DB280327FF00542364 /* ListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BF023DD28032B2400542364 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3BF023DE28032B3500542364 /* RandomColor.swift */,
+				3BF023E8280344ED00542364 /* ViewValues.swift */,
+				3BF023EA2803468C00542364 /* TextValues.swift */,
+				3BF023EC2803476F00542364 /* Icons.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3BF023E228033B6F00542364 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3BF023E328033B8000542364 /* CoreData */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		3BF023E328033B8000542364 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3BF023C72803228300542364 /* Todo_List.xcdatamodeld */,
+				3BF023E428033B9400542364 /* DataManager.swift */,
+				3BF023E628033C3900542364 /* DataManager+List.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +224,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF023ED2803476F00542364 /* Icons.swift in Sources */,
+				3BF023EB2803468C00542364 /* TextValues.swift in Sources */,
+				3BF023E128032CD900542364 /* TodoViewController.swift in Sources */,
+				3BF023E528033B9400542364 /* DataManager.swift in Sources */,
 				3BF023C32803228300542364 /* ViewController.swift in Sources */,
 				3BF023BF2803228300542364 /* AppDelegate.swift in Sources */,
 				3BF023C12803228300542364 /* SceneDelegate.swift in Sources */,
+				3BF023E728033C3900542364 /* DataManager+List.swift in Sources */,
+				3BF023DC280327FF00542364 /* ListCell.swift in Sources */,
+				3BF023D92803230800542364 /* ListViewController.swift in Sources */,
 				3BF023C92803228300542364 /* Todo_List.xcdatamodeld in Sources */,
+				3BF023E9280344ED00542364 /* ViewValues.swift in Sources */,
+				3BF023DF28032B3500542364 /* RandomColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +390,6 @@
 				INFOPLIST_FILE = "Todo List/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,7 +417,6 @@
 				INFOPLIST_FILE = "Todo List/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
